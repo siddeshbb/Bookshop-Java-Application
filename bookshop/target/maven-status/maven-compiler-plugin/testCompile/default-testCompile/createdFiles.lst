@@ -1,0 +1,5 @@
+com/visualabstractlabs/bookshop/dao/impl/BookshopDaoTest.class
+com/visualabstractlabs/bookshop/test/BookShopTest.class
+com/visualabstractlabs/bookshop/test/BorrowingLendingScenarioTest.class
+com/visualabstractlabs/bookshop/dao/impl/BorrowerDaoImplTest.class
+com/visualabstractlabs/bookshop/dao/impl/LenderDaoImplTest.class
