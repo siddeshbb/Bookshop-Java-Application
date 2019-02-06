@@ -1,0 +1,25 @@
+/target/
+.settings/
+# OS Generated files
+.DS_Store
+.DS_Store?
+.classpath
+/.springBeans
+.project
+/.settings/
+bin/
+/ain.iml
+/*.jsontest
+/*.log
+assembly-cf/target/
+assembly-cf-ac/target/
+assembly-cf-aspm/target/
+assembly-war/target/
+/.apt_generated/
+/.apt_generated_tests/
+/.idea/
+/**/*iml
+/**/*.DS_Store
+.factorypath
+ain/target/
+ain/bin/

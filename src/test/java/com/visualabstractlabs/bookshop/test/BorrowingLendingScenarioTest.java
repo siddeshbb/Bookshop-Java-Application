@@ -82,8 +82,8 @@ public class BorrowingLendingScenarioTest {
 				"India", "12345");
 
 		Set<String> authorNames = new HashSet<>();
-		authorNames.add(new String("Leo Tolstoy"));
-		lenderDao.lendABook(lender.getUserID(), "War and Peace Test", authorNames, 12, 100.0);
+		authorNames.add(new String("Suresh Kumar"));
+		lenderDao.lendABook(lender.getUserID(), "In Quest of Honesty", authorNames, 12, 100.0);
 
 		Assert.assertEquals(1, BookShop.getInstance().getLendingInfo().size());
 

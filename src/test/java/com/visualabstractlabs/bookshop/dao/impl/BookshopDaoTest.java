@@ -329,8 +329,12 @@ public class BookshopDaoTest {
 		Assert.assertEquals(false, bookShopDao.checkWhetherUserExists("1111"));
 	}
 
+
 	@After
-	public void restoreStreams() {
+	public void after() {
+		bookshop.getLendingInfo().removeAll(bookshop.getLendingInfo());
+		bookshop.getBorrowingInfo().removeAll(bookshop.getBorrowingInfo());
+		bookshop.setBookShopEarnings(0.0);
 		System.setOut(originalOut);
 	}
 }

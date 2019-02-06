@@ -3,6 +3,7 @@ package com.visualabstractlabs.bookshop.dao.impl;
 import java.time.LocalDate;
 import java.util.stream.Collectors;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -154,5 +155,11 @@ public class BorrowerDaoImplTest {
 
 	}
 
+	@After
+	public void after() {
+		bookshop.getLendingInfo().removeAll(bookshop.getLendingInfo());
+		bookshop.getBorrowingInfo().removeAll(bookshop.getBorrowingInfo());
+		bookshop.setBookShopEarnings(0.0);
+	}
 
 }

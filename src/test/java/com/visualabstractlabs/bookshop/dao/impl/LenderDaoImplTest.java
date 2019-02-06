@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -111,14 +112,17 @@ public class LenderDaoImplTest {
 				bookshop.getLendingInfo().stream().filter(l -> l.getUserId().equals(userId))
 						.collect(Collectors.toList()).get(0).getLendedBookId();
 
-		System.out.println("LendedBookid:" + lendedBookId);
-		System.out.println("LendedBookid:" + lendedBookId);
-		System.out.println("LendedBookid:" + lendedBookId);
-		System.out.println("LendedBookid:" + lendedBookId);
 		lenderDao.returnTheBookToLenderAfterLendingPeriodIsOver(lendedBookId,
 				LocalDate.parse("2019-02-28"));
 
 
+	}
+
+	@After
+	public void after() {
+		bookshop.getLendingInfo().removeAll(bookshop.getLendingInfo());
+		bookshop.getBorrowingInfo().removeAll(bookshop.getBorrowingInfo());
+		bookshop.setBookShopEarnings(0.0);
 	}
 
 
